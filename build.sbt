@@ -12,13 +12,13 @@ lazy val pqvexriscv = (project in file("."))
     libraryDependencies ++= Seq(
       "net.java.dev.jna" % "jna" % "5.7.0",
       "org.scalatest" %% "scalatest" % "3.0.5" % "test",
-      compilerPlugin("com.github.spinalhdl" % "spinalhdl-idsl-plugin_2.11" % spinalVersion)
+      compilerPlugin("com.github.spinalhdl" % "spinalhdl-idsl-plugin_2.13" % spinalVersion)
     ),
     run / connectInput := true,
     outputStrategy := Some(StdoutOutput),
   ).dependsOn(vexRiscv)
 
-//lazy val vexRiscv = RootProject(uri("git://github.com/SpinalHDL/VexRiscv#5fc4125763a1b66758c387c0abea32e602b2e4e5"))
+lazy val vexRiscv = RootProject(uri("git://github.com/SpinalHDL/VexRiscv#5fc4125763a1b66758c387c0abea32e602b2e4e5"))
 
 fork := true
 
