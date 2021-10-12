@@ -3,7 +3,8 @@ ThisBuild / organization := "mupq"
 // SpinalHDL v1.6.0 can support newer Scala versions, but VexRiscv only references 2.11.12
 ThisBuild / scalaVersion := "2.11.12"
 
-val spinalVersion = "1.6.0"
+//val spinalVersion = "1.6.0"
+val spinalVersion = "7e3c3d1367eaac655f4ad5636fba441852fe073e"
 
 lazy val pqvexriscv = (project in file("."))
   .settings(
